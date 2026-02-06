@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { motion } from "framer-motion";
-import heroBg from "../assets/images/electionbg.png";
-import { Button } from "../components/ui/button";
+import heroBg from "../../assets/images/electionbg.png";
+import { Button } from "../../components/ui/button";
 import { Calendar } from "lucide-react";
 
 export default function Hero() {

@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { Menu, X } from "lucide-react";
-import BangladeshIcon from "../components/BangladeshIcon";
+import BangladeshIcon from "../components/home/BangladeshIcon";
 import { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 

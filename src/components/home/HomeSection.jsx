@@ -4,30 +4,9 @@ import {
   FaPoll,
   FaCheckCircle,
 } from "react-icons/fa";
+import ElectionPolls from "./ElectionPolls";
 
-const polls = [
-  {
-    name: "Md. Rahim",
-    party: "Awami League",
-    area: "Dhaka-10",
-    percent: 72,
-    color: "bg-green-600",
-  },
-  {
-    name: "Sumon Ahmed",
-    party: "BNP",
-    area: "Chattogram-5",
-    percent: 65,
-    color: "bg-blue-600",
-  },
-  {
-    name: "Sadia Hossain",
-    party: "Jatiya Party",
-    area: "Sylhet-2",
-    percent: 58,
-    color: "bg-green-600",
-  },
-];
+
 
 export default function HomeSection() {
   return (
@@ -103,47 +82,7 @@ export default function HomeSection() {
     </div>
 
   
-      <section className="max-w-7xl mx-auto px-4 mt-10">
-        <h2 className="text-center font-semibold text-lg mb-6">
-          • Trending Polls •
-        </h2>
-
-        <div className="grid md:grid-cols-3 gap-6">
-          {polls.map((p, i) => (
-            <div
-              key={i}
-              className="bg-white rounded-xl shadow p-5 text-center"
-            >
-              <img
-                src="https://i.pravatar.cc/100"
-                className="w-20 h-20 rounded-full mx-auto"
-              />
-              <h3 className="font-semibold mt-3">{p.name}</h3>
-              <p className="text-sm text-gray-500">
-                Party: {p.party} <br /> {p.area}
-              </p>
-
-              <div className="mt-4">
-                <div className="h-3 bg-gray-200 rounded">
-                  <div
-                    className={`h-3 rounded ${p.color}`}
-                    style={{ width: `${p.percent}%` }}
-                  />
-                </div>
-                <p className="mt-1 text-sm font-medium">{p.percent}%</p>
-              </div>
-
-              <button
-                className={`mt-4 w-full text-white py-2 rounded ${
-                  p.color
-                }`}
-              >
-                Vote Now
-              </button>
-            </div>
-          ))}
-        </div>
-      </section>
+      <ElectionPolls/>
 
       {/* Stats */}
       <section className="max-w-7xl mx-auto px-4 mt-10 grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -213,7 +152,7 @@ export default function HomeSection() {
       </section>
 
       
-      <section className="bg-linear-to-r from-green-600 to-red-600 text-white py-10 text-center">
+      <section className="text-black py-10 text-center">
         <h2 className="text-xl font-semibold mb-4">
           Join Thousands of Citizens Shaping Bangladesh’s Future!
         </h2>
@@ -234,3 +173,7 @@ export default function HomeSection() {
     </div>
   );
 }
+
+
+
+//bg-linear-to-r from-green-600 to-red-600
