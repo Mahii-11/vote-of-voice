@@ -42,7 +42,7 @@ const polls = [
     candidateImage: candidate3,
     party: "BNP",
     partyImage: party3,
-    seat: "Dhaka-15",
+    seat: "Dhaka-17",
     percent: 58,
     color: "bg-red-600",
     status: "Close Call",
