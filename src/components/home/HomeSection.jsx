@@ -17,7 +17,7 @@ export default function HomeSection() {
            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
 
 
-      <div className="flex border rounded overflow-hidden">
+   {/*  <div className="flex border rounded overflow-hidden">
         <span className="bg-gray-100 px-4 flex items-center text-sm text-gray-600 whitespace-nowrap">
           নির্বাচনের ধরন
         </span>
@@ -26,7 +26,7 @@ export default function HomeSection() {
           <option>সিটি কর্পোরেশন নির্বাচন</option>
           <option>ইউনিয়ন পরিষদ নির্বাচন</option>
         </select>
-      </div>
+      </div>  
 
       
       <div className="flex border rounded overflow-hidden whitespace-nowrap">
@@ -46,7 +46,7 @@ export default function HomeSection() {
           <option>সংসদ সদস্য</option>
           <option>স্বতন্ত্র প্রার্থী</option>
         </select>
-      </div>
+      </div> */}
 
       <div className="flex border rounded overflow-hidden">
         <span className="bg-gray-100 px-4 flex items-center text-sm text-gray-600">
