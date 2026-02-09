@@ -117,8 +117,8 @@ const PollCard = ({ seat, index, onEndorse, isVoting = false }) => {
 
         {/* Text Content */}
         <div className="space-y-1 mb-6">
-  {/* Candidate Name */}
-           <h3 className="text-lg sm:text-xl lg:text-2xl font-display font-bold text-foreground leading-snug drop-shadow-sm">
+         {/* Candidate Name */}
+           <h3 className="text-sm sm:text-lg whitespace-nowrap font-display font-bold text-foreground leading-snug drop-shadow-sm">
             {candidate.name}
           </h3>
 
