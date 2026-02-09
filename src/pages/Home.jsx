@@ -1,13 +1,21 @@
-import Navbar from "../layout/Navbar";
 import Hero from "../components/home/Hero";
-import  HomeSection  from "../components/home/HomeSection";
+import PollSearchSection from "../components/home/PollSearchSection";
+import ElectionPolls from "../components/home/candidatelist/ElectionPolls";
+import PollSummary from "../components/home/PollSummary";
+import PollMap from "../components/home/PollMap";
+import WhyChooseUs from "../components/home/WhyChooseUs";
+import CallToAction from "../components/home/CallToAction";
 
 export default function Home() {
   return (
     <div className="font-sans">
-      <Navbar/>
-      <Hero/>
-      <HomeSection/>
+      <Hero />
+      <PollSearchSection />
+      <ElectionPolls />
+      <PollSummary />
+      <PollMap />
+      <WhyChooseUs />
+      <CallToAction />
     </div>
-  )
+  );
 }

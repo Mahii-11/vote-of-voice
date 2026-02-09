@@ -24,6 +24,23 @@ export const getCandidateList = async () => {
     }
 };
 
+export const getDistrict = async () => {
+
+    try {
+        const response = await fetch(`${BASE_URL}/district-list`);
+        if (!response.ok) {
+            throw new Error(`Request failed: ${response.status}`);
+        }
+
+        const result = await response.json();
+
+        return result.data;
+        }catch (error) {
+         console.error("District Api error:", error);
+         throw error;
+} 
+
+};
 
 
 
