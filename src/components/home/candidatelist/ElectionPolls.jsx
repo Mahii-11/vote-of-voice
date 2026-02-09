@@ -9,14 +9,6 @@ import { getCandidateList } from "../../../services/api";
 
 
 
-const PARTY_COLOR_MAP = {
-  বিএনপি: "bg-red-600",
-  জামাত: "bg-blue-600",
-  এনসিপি: "bg-emerald-600",
-  স্বতন্ত্র: "bg-orange-500",
-};
-
-const DEFAULT_COLOR = "bg-pink-600";
 
 const PollCardSkeleton = ({ index }) => {
   return (

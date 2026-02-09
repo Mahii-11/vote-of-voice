@@ -130,10 +130,10 @@ const PollCard = ({ seat, index, onEndorse, isVoting = false }) => {
           onClick={() => onEndorse(candidate.id)}
           disabled={isVoting}
           className={cn(
-            "w-full py-3 rounded-xl font-bold flex items-center justify-center gap-2 transition",
+            "w-full py-3 rounded-xl font-bold flex items-center justify-center gap-2 transition cursor-pointer",
             isVoting
               ? "bg-neutral-200 text-neutral-400"
-              : "bg-linear-to-r from-emerald-600 to-teal-600 text-white shadow-lg hover:shadow-xl hover:-translate-y-1 active:translate-y-0"
+              : "bg-linear-to-r from-emerald-600 to-teal-600 text-white shadow-lg hover:shadow-xl hover:-translate-y-1 active:translate-y-0 "
           )}
         >
           {isVoting ? (
