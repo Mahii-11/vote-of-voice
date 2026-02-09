@@ -71,7 +71,7 @@ export default function Navbar() {
           <button
             className={`px-3 sm:px-5 py-2 sm:py-2.5 rounded-full font-medium transition-all duration-300 text-sm sm:text-base ${
               scrolled
-                ? "bg-green-700 text-white hover:bg-green-800 shadow-sm"
+                ? "bg-linear-to-r from-emerald-600 to-teal-600 text-white hover:bg-green-800 shadow-sm"
                 : "bg-white/20 backdrop-blur-sm border border-slate-900/20 text-slate-900 hover:bg-slate-900 hover:text-white"
             }`}
           >
@@ -111,7 +111,7 @@ export default function Navbar() {
                   {item}
                 </a>
               ))}
-              <button className="w-full mt-4 bg-green-700 text-white py-3 sm:py-3.5 rounded-lg font-semibold active:scale-95 transition-transform text-base sm:text-lg">
+              <button className="w-full mt-4 bg-linear-to-r from-emerald-600 to-teal-600 text-white py-3 sm:py-3.5 rounded-lg font-semibold active:scale-95 transition-transform text-base sm:text-lg">
                 Start a Poll
               </button>
             </div>
