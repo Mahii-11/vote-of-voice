@@ -115,18 +115,16 @@ export const ElectionPolls = () => {
               transition={{ duration: 0.6 }}
             >
               <span className="text-emerald-600 font-bold tracking-wider text-sm uppercase mb-2 block">
-                Live Election Data
+                লাইভ নির্বাচন তথ্য
               </span>
               <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6 tracking-tight dark:text-white">
-                National Poll{" "}
+                 জনমত গড়ে 
                 <span className="text-transparent bg-clip-text bg-linear-to-r from-green-600 to-red-600">
-                  Projections
+                  ভবিষ্যৎ
                 </span>
               </h2>
               <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
-                Real-time tracking of candidate performance across key
-                constituencies. Data updated every hour based on verified
-                polling stations.
+               একই আসনের প্রার্থীদের মধ্যে আপনার পছন্দ নির্বাচন করুন এবং সমর্থন দিয়ে জানান জনতার অবস্থান।
               </p>
             </motion.div>
           </div>
@@ -158,7 +156,7 @@ export const ElectionPolls = () => {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
               </span>
-              Live Updates Enabled • Source: National Election Commission
+             লাইভ আপডেট সক্রিয় • সূত্র: জাতীয় নির্বাচন কমিশন
             </div>
           </motion.div>
         </div>

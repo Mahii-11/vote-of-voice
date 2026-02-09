@@ -28,21 +28,22 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-serif font-bold text-[#F5EEDC] leading-[1.1] mb-4 sm:mb-6 drop-shadow-sm">
-            Your Voice <br />
-            Matters in Bangladesh
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-[#F5EEDC] leading-[1.1] mb-4 sm:mb-6 drop-shadow-sm">
+             আপনার কণ্ঠেই
+            <br />
+           <span  className="block mt-4">গড়বে আগামী বাংলাদেশ</span>
           </h1>
 
           <p className="text-sm sm:text-base md:text-lg lg:text-xl text-[#FFFFFF] max-w-md sm:max-w-lg leading-relaxed mb-6 sm:mb-8">
-            Participate in live polls, share your opinion, and engage in MP candidate surveys.
+           লাইভ গণভোটে অংশ নিন, মতামত জানান এবং সচেতন সিদ্ধান্তের অংশ হয়ে উঠুন।
           </p>
 
           <div className="flex flex-wrap gap-3 sm:gap-4">
             <Button size="lg" className="h-12 sm:h-14 px-6 sm:px-8 text-sm sm:text-base bg-[#006A4E] hover:bg-[#00553A] text-white border-0 shadow-lg cursor-pointer">
-              View Conferences
+              প্রার্থী দেখুন
             </Button>
             <Button size="lg" variant="outline" className="h-12 sm:h-14 px-6 sm:px-8 text-sm sm:text-base bg-white/50 text-slate-900 border-white/20 hover:bg-white/10 hover:text-slate-700 backdrop-blur-sm cursor-pointer">
-              Learn More
+              ফলাফল দেখুন
             </Button>
           </div>
         </motion.div>
@@ -60,16 +61,16 @@ export default function Hero() {
                 <Calendar className="w-4 h-4 sm:w-6 sm:h-6" />
               </div>
               <div>
-                <p className="text-white/60 text-xs sm:text-sm uppercase tracking-wider">Upcoming Election</p>
-                <h3 className="text-white font-serif font-bold text-sm sm:text-xl">Bangladesh 2026</h3>
+                <p className="text-white/60 text-xs sm:text-sm uppercase tracking-wider">আসন্ন নির্বাচন</p>
+                <h3 className="text-white font-serif font-bold text-sm sm:text-xl">বাংলাদেশ ২০২৬</h3>
               </div>
             </div>
 
             <div className="space-y-3 sm:space-y-4">
               {[
-                { label: "Election Date", value: "February 12, 2026" },
-                { label: "Status", value: "Preparations Ongoing" }, 
-                { label: "Our Goal", value: "Transparent & Fair Democracy" }
+                { label: "নির্বাচনের তারিখ", value: "১২ ফেব্রুয়ারি, ২০২৬" },
+                { label: "বর্তমান অবস্থা", value: "প্রস্তুতি চলছে" }, 
+                { label: "আমাদের লক্ষ্য", value: "স্বচ্ছ ও সুষ্ঠু গণতন্ত্র" }
               ].map((item) => (
                 <div key={item.label} className="flex justify-between items-center border-b border-white/10 pb-2 last:border-0 last:pb-0">
                   <span className="text-white/60 text-xs sm:text-sm">{item.label}</span>
@@ -84,7 +85,7 @@ export default function Hero() {
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2.5 w-2.5 sm:h-3 sm:w-3 bg-red-500"></span>
                 </span>
-                <p className="text-white/80 text-xs sm:text-sm font-medium uppercase">Live Updates Available</p>
+                <p className="text-white/80 text-xs sm:text-sm font-medium uppercase">লাইভ আপডেট</p>
               </div>
             </div>
           </div>

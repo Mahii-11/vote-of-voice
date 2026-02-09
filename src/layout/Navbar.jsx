@@ -18,13 +18,11 @@ export default function Navbar() {
   }, []);
 
   const menuItems = [
-    "Home",
-    "Active Polls",
-    "Candidates",
-    "Surveys",
-    "Results",
-    "How it works",
-    "Login",
+    "প্রার্থী খুঁজুন",
+    "সমর্থন দিন",
+    "পরিসংখ্যান",
+    "সর্বশেষ ফলাফল",
+    "কেন আমরা",
   ];
 
   return (
@@ -47,9 +45,9 @@ export default function Navbar() {
                 scrolled ? "text-[#006A4E]" : "text-slate-900"
               }`}
             >
-              VOTE
+               গণ
               <span className={scrolled ? "text-slate-700" : "text-[#006A4E]"}>
-                VOICE
+               কণ্ঠ
               </span>
             </span>
           </div>
@@ -75,7 +73,7 @@ export default function Navbar() {
                 : "bg-white/20 backdrop-blur-sm border border-slate-900/20 text-slate-900 hover:bg-slate-900 hover:text-white"
             }`}
           >
-            Start a Poll
+            গণভোটে হ্যাঁ
           </button>
         </div>
 
@@ -112,7 +110,7 @@ export default function Navbar() {
                 </a>
               ))}
               <button className="w-full mt-4 bg-linear-to-r from-emerald-600 to-teal-600 text-white py-3 sm:py-3.5 rounded-lg font-semibold active:scale-95 transition-transform text-base sm:text-lg">
-                Start a Poll
+                গণভোটে হ্যাঁ
               </button>
             </div>
           </motion.div>

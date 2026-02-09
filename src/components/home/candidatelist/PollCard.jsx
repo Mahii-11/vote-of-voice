@@ -159,7 +159,7 @@ const PollCard = ({ seat, index, onEndorse, isVoting = false }) => {
       {/* Header */}
       <div className="text-center py-6 bg-linear-to-r from-blue-50 via-white to-purple-50 border-b">
         <h2 className="text-xs tracking-[0.3em] font-bold text-neutral-500 uppercase">
-          District Breakdown
+          জেলাভিত্তিক তথ্য
         </h2>
 
         <div className="text-2xl font-black mt-1">

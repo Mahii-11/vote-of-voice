@@ -24,16 +24,36 @@ export const getCandidateList = async () => {
     }
 };
 
-export const getDistrict = async () => {
+
+
+
+export const getDivision = async () => {
+    try {
+        const res = await fetch(`${BASE_URL}/division-list`);
+        if (!res.ok) {
+            throw new Error(`Request failed: ${res.status}`);
+        }
+
+        const result = await res.json();
+
+        return result.data;
+    } catch (error) {
+        console.error("Division Api error:", error);
+        return []; 
+    }
+};
+
+
+export const getDistrict = async (divisionId) => {
 
     try {
-        const response = await fetch(`${BASE_URL}/district-list`);
+        const response = await fetch(`${BASE_URL}/get-district/${divisionId}`);
         if (!response.ok) {
             throw new Error(`Request failed: ${response.status}`);
         }
 
         const result = await response.json();
-
+        console.log("DISTRICT API RAW 👉", result);
         return result.data;
         }catch (error) {
          console.error("District Api error:", error);
@@ -41,6 +61,22 @@ export const getDistrict = async () => {
 } 
 
 };
+
+export const getSeat = async (districtId) => {
+    try {
+        const res = await fetch(`${BASE_URL}/get-seats/${districtId}`);
+        if (!res.ok) {
+            throw new Error(`Request failed: ${res.status}`);
+        }
+        const result = await res.json();
+        return result.data;
+
+    } catch (error) {
+        console.error("Seat Api erro:", error);
+        throw error;
+    }
+}; 
+
 
 
 
