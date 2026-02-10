@@ -148,20 +148,44 @@ export default function PollSearchSection() {
             </div>
       
           
-            <div className="flex items-center">
-              <button 
-              onClick={handleSearch}
-              className="w-full bg-sky-600 hover:bg-sky-700 text-white py-2 rounded transition">
-                অনুসন্ধান
-              </button>
-            </div> 
+           <div className="flex items-center">
+            <button
+            onClick={handleSearch}
+            disabled={loading}
+            className="w-full bg-sky-600 hover:bg-sky-700 text-white py-2 rounded transition flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
+             >
+            {loading ? (
+               <>
+               <span className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></span>
+               খোঁজা হচ্ছে...
+                </>
+                ) : (
+                "অনুসন্ধান"
+                 )}
+                </button>
+              </div>
+
             </div>
           </div>
         </div>    
 
-          {
-               loading && <p className="text-center mt-6">Loading...</p>
-            }
+           {
+  loading && (
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+      {[...Array(6)].map((_, i) => (
+        <div
+          key={i}
+          className="p-6 rounded-2xl shadow animate-pulse bg-white"
+        >
+          <div className="h-40 bg-gray-300 rounded-lg mb-4"></div>
+          <div className="h-4 bg-gray-300 rounded w-3/4 mb-2"></div>
+          <div className="h-4 bg-gray-300 rounded w-1/2"></div>
+        </div>
+      ))}
+    </div>
+  )
+}
+
 
              {
                seatData && (

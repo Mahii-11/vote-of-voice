@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { motion } from "framer-motion";
+import { toast } from "sonner";
 import { AlertTriangle } from "lucide-react";
 import { useEffect, useState } from "react";
 import PollCard from "./PollCard";
@@ -167,19 +168,22 @@ export const ElectionPolls = () => {
         candidateId={selectedCandidateId}
         onClose={() => setModalOpen(false)}
         onSubmit={async (data) => {
-          try {
-            await submitVote({
-              candidate_id: selectedCandidateId,
-              name: data.name,
-              mobile: data.phone,
-            });
+        try {
+        await submitVote({
+        candidate_id: selectedCandidateId,
+        name: data.name,
+        mobile: data.phone,
+        });
 
-            alert("Vote submitted successfully!");
-            setModalOpen(false);
-          } catch {
-            alert("Something went wrong!");
-          }
-        }}
+        setModalOpen(false); // ✅ modal instantly close
+
+       toast.success("সমর্থন সফল হয়েছে!"); // ✅ modern UX
+      } catch {
+      toast.error("কিছু সমস্যা হয়েছে!");
+      }
+     }}
+
+       
       />
     </>
   );
