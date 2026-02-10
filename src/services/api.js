@@ -79,6 +79,13 @@ export const getSeat = async (districtId) => {
 
 
 
+export const getCandidateBySeat = async (seatId) => {
+    const res = await fetch(`${BASE_URL}/candidate-list-by-filter?seat_id=${seatId}`);
+    const data = await res.json();
+    return data?.data?.data?.[0] || null;
+};
+
+
 
 
 

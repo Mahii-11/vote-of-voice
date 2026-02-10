@@ -1,6 +1,6 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
-import { getDistrict, getDivision, getSeat } from "../../services/api";
+import { getCandidateBySeat, getDistrict, getDivision, getSeat } from "../../services/api";
+import PollCard from "./candidatelist/PollCard";
 
 
 
@@ -11,6 +11,10 @@ export default function PollSearchSection() {
        const [selectedDivision, setSelectedDivision] = useState("");
        const [selectedDistrict, setSelectedDistrict] = useState("");
        const [selectedSeat, setSelectedSeat] = useState("");
+       //const [candidates, setCandidates] = useState([]);
+       const [seatData, setSeatData] = useState(null);
+
+       const [loading, setLoading] = useState(false);
 
 
          useEffect(() => {
@@ -48,6 +52,24 @@ export default function PollSearchSection() {
          loadSeats();
  
          }, [selectedDistrict]);
+
+
+         const handleSearch = async () => {
+          if (!selectedSeat) {
+            alert("দয়া করে একটি আসন নির্বাচন করুন");
+            return;
+          }
+
+          try {
+            setLoading(true);
+            const data = await getCandidateBySeat(selectedSeat);
+            setSeatData(data);
+          } catch (err) {
+            console.log(err);
+          } finally {
+            setLoading(false);
+          }
+         };
 
      
 
@@ -127,13 +149,66 @@ export default function PollSearchSection() {
       
           
             <div className="flex items-center">
-              <button className="w-full bg-sky-600 hover:bg-sky-700 text-white py-2 rounded transition">
+              <button 
+              onClick={handleSearch}
+              className="w-full bg-sky-600 hover:bg-sky-700 text-white py-2 rounded transition">
                 অনুসন্ধান
               </button>
             </div> 
             </div>
           </div>
-     </div>           
- </div>
-  )
-};
+        </div>    
+
+          {
+               loading && <p className="text-center mt-6">Loading...</p>
+            }
+
+             {
+               seatData && (
+              <div className="max-w-md mx-auto mt-6 px-4">
+              <PollCard seat={seatData} />
+              </div>
+               )
+              }       
+       </div>
+      )
+    };
+
+
+
+    /*                     
+    
+
+     candidates.length > 0 && (
+           <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-6 mt-10">
+            {candidates.map((c) => (
+              <div key={c.id} className="bg-white shadow rounded-xl p-4 text-center">
+
+               <img
+                    src={c.image}
+                    alt={c.name}
+                   className="w-28 h-28 object-cover mx-auto rounded-full"
+                 />
+
+              <h2 className="font-semibold mt-3">{c.name}</h2>
+               <p className="text-gray-500">{c.party}</p>
+
+              <p className="text-green-600 font-bold mt-1">
+              {c.poll_percentage}
+               </p>
+
+             </div>
+             ))}
+             </div>
+            )
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    */

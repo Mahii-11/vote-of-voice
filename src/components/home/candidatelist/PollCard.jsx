@@ -3,7 +3,7 @@ import { Crown, Vote, TrendingUp } from "lucide-react";
 import { motion } from "framer-motion";
 import { cn } from "../../../lib/utils";
 
-const PollCard = ({ seat, index, onEndorse, isVoting = false }) => {
+const PollCard = ({ seat, index, onEndorse, candidates , isVoting = false }) => {
 
   if (!seat?.candidates || seat.candidates.length < 2) return null;
 
@@ -35,7 +35,7 @@ const PollCard = ({ seat, index, onEndorse, isVoting = false }) => {
       <motion.div
         whileHover={{ y: -6 }}
         className={cn(
-          "flex-1 flex flex-col items-center text-center p-7 sm:p-9 relative transition-all duration-300",
+          "flex-1 flex flex-col items-center text-center p-4 sm:p-5 relative transition-all duration-300",
           isLeading
             ? "bg-linear-to-b from-white via-blue-50/40 to-purple-50/30 scale-[1.02]"
             : "bg-white"
@@ -60,7 +60,7 @@ const PollCard = ({ seat, index, onEndorse, isVoting = false }) => {
         <div className="relative mb-5 group">
           <div
             className={cn(
-              "w-32 h-32 rounded-full p-0.75 shadow-xl transition duration-300",
+              "w-20 h-20 rounded-full p-0.75 shadow-xl transition duration-300",
               isLeading
                 ? "bg-linear-to-tr from-amber-300 to-orange-400"
                 : "bg-neutral-200"
@@ -85,7 +85,7 @@ const PollCard = ({ seat, index, onEndorse, isVoting = false }) => {
         </div>
 
         {/* Name */}
-        <h3 className="text-lg font-black tracking-tight">
+        <h3 className="text-sm font-black tracking-tight">
           {candidate.name}
         </h3>
 
@@ -97,7 +97,7 @@ const PollCard = ({ seat, index, onEndorse, isVoting = false }) => {
         {/* Percentage */}
         <div className="mb-6 w-full">
           <div className="flex justify-center items-end gap-1 mb-2">
-            <span className="text-4xl font-extrabold tracking-tight">
+            <span className="text-2xl font-extrabold tracking-tight">
               {candidate.pollPercentage}
             </span>
             <span className="text-lg font-bold text-neutral-400 mb-1">
@@ -130,7 +130,7 @@ const PollCard = ({ seat, index, onEndorse, isVoting = false }) => {
           onClick={() => onEndorse(candidate.id)}
           disabled={isVoting}
           className={cn(
-            "w-full py-3 rounded-xl font-bold flex items-center justify-center gap-2 transition cursor-pointer",
+            "w-full py-2 text-sm rounded-lg font-bold flex items-center justify-center gap-2 transition cursor-pointer",
             isVoting
               ? "bg-neutral-200 text-neutral-400"
               : "bg-linear-to-r from-emerald-600 to-teal-600 text-white shadow-lg hover:shadow-xl hover:-translate-y-1 active:translate-y-0 "
@@ -154,15 +154,15 @@ const PollCard = ({ seat, index, onEndorse, isVoting = false }) => {
       initial={{ opacity: 0, y: 40 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.08 }}
-      className="bg-white rounded-3xl border shadow-xl hover:shadow-2xl transition overflow-hidden"
+      className="bg-white rounded-3xl border shadow-xl hover:shadow-2xl transition overflow-hidden scale-90"
     >
       {/* Header */}
-      <div className="text-center py-6 bg-linear-to-r from-blue-50 via-white to-purple-50 border-b">
+      <div className="text-center py-3 bg-linear-to-r from-blue-50 via-white to-purple-50 border-b">
         <h2 className="text-xs tracking-[0.3em] font-bold text-neutral-500 uppercase">
           জেলাভিত্তিক তথ্য
         </h2>
 
-        <div className="text-2xl font-black mt-1">
+        <div className="text-lg font-black mt-1">
           {seat.district} • {seat.seat_name}
         </div>
       </div>
@@ -179,7 +179,7 @@ const PollCard = ({ seat, index, onEndorse, isVoting = false }) => {
           <motion.div
             animate={{ scale: [1, 1.08, 1] }}
             transition={{ repeat: Infinity, duration: 2 }}
-            className="z-10 w-12 h-12 rounded-full bg-linear-to-r from-emerald-600 to-teal-600 text-white font-extrabold flex items-center justify-center shadow-lg"
+            className="z-10 w-8 h-8 text-xs rounded-full bg-linear-to-r from-emerald-600 to-teal-600 text-white font-extrabold flex items-center justify-center shadow-lg"
           >
             VS
           </motion.div>
