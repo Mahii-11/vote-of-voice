@@ -8,11 +8,21 @@ import WhyChooseUs from "../components/home/WhyChooseUs";
 export default function Home() {
   return (
     <div className="font-sans">
-      <Hero />
-      <PollSearchSection />
-      <ElectionPolls />
-      <PollSummary />
-      <WhyChooseUs />
+      <div id="hero">
+         <Hero />
+      </div>
+      <div  id="candidate-search">
+         <PollSearchSection />
+      </div>
+      <div  id="support">
+        <ElectionPolls />
+      </div>
+     <div id="statistics">
+       <PollSummary />
+     </div>
+    <div id="why-us">
+        <WhyChooseUs />
+    </div>
     </div>
   );
 }

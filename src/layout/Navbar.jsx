@@ -18,12 +18,13 @@ export default function Navbar() {
   }, []);
 
   const menuItems = [
-    "প্রার্থী খুঁজুন",
-    "সমর্থন দিন",
-    "পরিসংখ্যান",
-    "সর্বশেষ ফলাফল",
-    "কেন আমরা",
-  ];
+  { label: "প্রার্থী খুঁজুন", id: "candidate-search" },
+  { label: "সমর্থন দিন", id: "support" },
+  { label: "পরিসংখ্যান", id: "statistics" },
+  { label: "সর্বশেষ ফলাফল", id: "results" },
+  { label: "কেন আমরা", id: "why-us" },
+];
+
 
   return (
     <nav
@@ -39,7 +40,12 @@ export default function Navbar() {
           <div className="p-1 transition-transform group-hover:scale-110 duration-300">
             <BangladeshIcon size={8} />
           </div>
-          <div className="flex flex-col leading-none">
+          <div className="flex flex-col leading-none"
+          onClick={() => {
+           window.history.replaceState(null, "", " ");
+           window.scrollTo({ top: 0, behavior: "smooth" });
+           }}
+          >
             <span
               className={`text-xl sm:text-2xl md:text-3xl font-serif font-black tracking-tighter transition-colors duration-300 ${
                 scrolled ? "text-[#006A4E]" : "text-slate-900"
@@ -57,13 +63,13 @@ export default function Navbar() {
         <div className="hidden md:flex items-center gap-4 lg:gap-8">
           {menuItems.map((item) => (
             <a
-              key={item}
-              href={`#${item.toLowerCase()}`}
+              key={item.id}
+              href={`#${item.id}`}
               className={`text-sm sm:text-base font-semibold transition-all duration-300 hover:text-green-700 ${
                 scrolled ? "text-gray-700" : "text-slate-800"
               }`}
             >
-              {item}
+                {item.label}
             </a>
           ))}
           <button
