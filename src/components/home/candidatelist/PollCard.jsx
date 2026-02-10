@@ -48,7 +48,7 @@ const PollCard = ({ seat, index, onEndorse, candidates , isVoting = false }) => 
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               className="flex items-center gap-1.5 px-3 py-1 rounded-full 
-              bg-yellow-100 text-yellow-700 text-xs font-extrabold uppercase tracking-wider shadow"
+              bg-yellow-100 text-yellow-700  font-extrabold uppercase tracking-wider shadow whitespace-nowrap text-xs"
             >
               <Crown className="w-4 h-4 fill-yellow-500" />
               এগিয়ে আছেন
