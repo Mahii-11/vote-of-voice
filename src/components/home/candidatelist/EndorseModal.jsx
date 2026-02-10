@@ -77,9 +77,9 @@ const EndorseModal = ({ open, onClose, candidateId, onSubmit }) => {
             <button
               type="submit"
               className="w-full py-3 rounded-full bg-slate-900 text-white font-semibold
-              hover:bg-linear-to-r hover:from-emerald-600 hover:to-red-600 transition-all"
+              hover:bg-linear-to-r hover:from-emerald-600 hover:to-red-600 transition-all cursor-pointer"
             >
-              Submit Vote
+              Submit Now
             </button>
           </form>
         </motion.div>

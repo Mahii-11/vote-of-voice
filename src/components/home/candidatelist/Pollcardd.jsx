@@ -3,7 +3,8 @@ import { Crown, Vote, TrendingUp } from "lucide-react";
 import { motion } from "framer-motion";
 import { cn } from "../../../lib/utils";
 
-const PollCard = ({ seat, index, onEndorse, candidates , isVoting = false }) => {
+
+const Pollcardd = ({ seat, index }) => {
 
   if (!seat?.candidates || seat.candidates.length < 2) return null;
 
@@ -85,7 +86,7 @@ const PollCard = ({ seat, index, onEndorse, candidates , isVoting = false }) => 
         </div>
 
         {/* Name */}
-        <h3 className="text-sm font-black tracking-tight">
+        <h3 className="text-sm font-black tracking-tight whitespace-nowrap">
           {candidate.name}
         </h3>
 
@@ -124,27 +125,6 @@ const PollCard = ({ seat, index, onEndorse, candidates , isVoting = false }) => 
             {candidate.votes.toLocaleString()} votes
           </div>
         </div>
-
-        {/* Button */}
-        <button
-          onClick={() => onEndorse(candidate.id)}
-          disabled={isVoting}
-          className={cn(
-            "w-full py-2 text-sm rounded-lg font-bold flex items-center justify-center gap-2 transition cursor-pointer",
-            isVoting
-              ? "bg-neutral-200 text-neutral-400"
-              : "bg-linear-to-r from-emerald-600 to-teal-600 text-white shadow-lg hover:shadow-xl hover:-translate-y-1 active:translate-y-0 "
-          )}
-        >
-          {isVoting ? (
-            <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
-          ) : (
-            <>
-              <Vote size={18} />
-               সমর্থন করুন
-            </>
-          )}
-        </button>
       </motion.div>
     );
   };
@@ -187,18 +167,11 @@ const PollCard = ({ seat, index, onEndorse, candidates , isVoting = false }) => 
 
         {renderCandidate(right)}
       </div>
-
-      {/* Footer 
-      <div className="bg-neutral-50 py-3 px-6 flex justify-between text-xs text-neutral-500">
-        <div className="flex items-center gap-2">
-          <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-          Live Polling
-        </div>
-
-        <div>Updated just now</div>
-      </div>  */}
     </motion.div>
   );
 };
 
-export default PollCard;
+
+export default Pollcardd
+
+

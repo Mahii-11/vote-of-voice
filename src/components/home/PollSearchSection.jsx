@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { getCandidateBySeat, getDistrict, getDivision, getSeat } from "../../services/api";
-import PollCard from "./candidatelist/PollCard";
+import Pollcardd from "./candidatelist/Pollcardd";
 
 
 
@@ -165,8 +165,8 @@ export default function PollSearchSection() {
 
              {
                seatData && (
-              <div className="max-w-md mx-auto mt-6 px-4">
-              <PollCard seat={seatData} />
+              <div className="max-w-2xl mx-auto mt-6 px-4">
+              <Pollcardd seat={seatData} />
               </div>
                )
               }       
