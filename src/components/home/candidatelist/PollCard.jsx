@@ -85,7 +85,7 @@ const PollCard = ({ seat, index, onEndorse, candidates , isVoting = false }) => 
         </div>
 
         {/* Name */}
-        <h3 className="text-sm font-black tracking-tight">
+        <h3 className="text-xs font-black tracking-tight whitespace-nowrap">
           {candidate.name}
         </h3>
 
