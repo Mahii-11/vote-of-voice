@@ -152,7 +152,7 @@ export default function PollSearchSection() {
             <button
             onClick={handleSearch}
             disabled={loading}
-            className="w-full bg-sky-600 hover:bg-sky-700 text-white py-2 rounded transition flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
+            className="w-35 bg-sky-600 hover:bg-sky-700 text-white py-2 rounded transition flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
              >
             {loading ? (
                <>

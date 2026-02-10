@@ -122,7 +122,7 @@ const Pollcardd = ({ seat, index }) => {
           {/* Votes */}
           <div className="flex items-center justify-center gap-1 mt-2 text-xs text-neutral-500">
             <TrendingUp size={14} />
-            {candidate.votes.toLocaleString()} votes
+            votes
           </div>
         </div>
       </motion.div>

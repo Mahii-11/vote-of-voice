@@ -119,7 +119,7 @@ export const ElectionPolls = () => {
                 লাইভ নির্বাচন তথ্য
               </span>
               <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6 tracking-tight dark:text-white">
-                 জনমত গড়ে 
+                জনমত  গড়ে {" "}
                 <span className="text-transparent bg-clip-text bg-linear-to-r from-green-600 to-red-600">
                   ভবিষ্যৎ
                 </span>
