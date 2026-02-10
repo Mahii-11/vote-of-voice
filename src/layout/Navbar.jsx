@@ -107,12 +107,12 @@ export default function Navbar() {
             <div className="px-6 py-6 space-y-4 flex flex-col">
               {menuItems.map((item) => (
                 <a
-                  key={item}
-                  href={`#${item.toLowerCase()}`}
+                  key={item.id}
+                  href={`#${item.id}`}
                   className="text-lg sm:text-xl font-medium text-gray-800 hover:text-green-700 transition-colors"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  {item}
+                  {item.label}
                 </a>
               ))}
               <button className="w-full mt-4 bg-linear-to-r from-emerald-600 to-teal-600 text-white py-3 sm:py-3.5 rounded-lg font-semibold active:scale-95 transition-transform text-base sm:text-lg">
