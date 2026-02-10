@@ -130,7 +130,7 @@ export const ElectionPolls = () => {
           </div>
 
           {/* Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 w-full max-w-7xl mx-auto mt-6 px-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 w-full max-w-350 mx-auto mt-6 px-4">
             {polls.map((seat, index) => (
               <PollCard
                 key={seat.seat_id}
